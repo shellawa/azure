@@ -1,0 +1,16 @@
+{
+  "name": "azure",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node --env-file=src/config/.env src/main.js"
+  },
+  "keywords": [],
+  "author": "shellawa",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.19.3"
+  }
+}
