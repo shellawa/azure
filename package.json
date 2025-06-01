@@ -5,12 +5,17 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "start": "node --env-file=src/config/.env src/main.js"
+    "start": "node --env-file=src/config/.env src/main.js",
+    "dev": "nodemon --ignore * --env-file=src/config/.env src/main.js"
   },
   "keywords": [],
   "author": "shellawa",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.19.3"
+    "discord.js": "^14.19.3",
+    "ky": "^1.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

@@ -36,7 +36,7 @@ export const registerInteractions = async client => {
     const rest = new REST().setToken(process.env.DISCORD_TOKEN)
     try {
       await rest.put(Routes.applicationCommands(process.env.DISCORD_CLIENT_ID), { body: globalCommands })
-      console.log(`🚀 Registered ${globalCommands.length} global command(s).`)
+      console.log(`🚀 Registered ${globalCommands.length} global commands.`)
     } catch (e) {
       console.error("❌ Failed to register global commands:", e)
     }

@@ -1,4 +1,4 @@
-import { Events } from "discord.js"
+import { Events, MessageFlags } from "discord.js"
 
 export const name = Events.InteractionCreate
 
@@ -16,9 +16,9 @@ export const listener = async interaction => {
   } catch (err) {
     console.error(`❌ Error executing command "${interaction.commandName}":`, err)
     if (interaction.replied || interaction.deferred) {
-      await interaction.followUp({ content: "There was an error.", ephemeral: true })
+      await interaction.followUp({ content: "There was an error.", flags: MessageFlags.Ephemeral })
     } else {
-      await interaction.reply({ content: "There was an error.", ephemeral: true })
+      await interaction.reply({ content: "There was an error.", flags: MessageFlags.Ephemeral })
     }
   }
 }
